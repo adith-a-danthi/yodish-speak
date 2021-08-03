@@ -1,13 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./main.css" />
-    <title>Yodish Speak</title>
-</head>
-<body>
-    <h1>Hello!</h1>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./main.css" />
+		<title>Yodish Speak</title>
+	</head>
+	<body>
+		<div class="content">
+			<div class="intro">
+				<h1 class="heading">May the Force be with you.</h1>
+				<h1 class="sub-heading">Welcome to Yoda Speak</h1>
+				<p class="about">
+					To talk like yoda, always wanted? Well, now you can. Use the
+					translator to convert your text from English to Yodish.
+				</p>
+			</div>
+			<div class="translate">
+				<textarea
+					id="text-input"
+					placeholder="Enter your text in English"
+					rows="4"
+				></textarea>
+				<button id="translate-button">Translate to Yodish!</button>
+				<p class="translated-heading">Translated text will come here &darr;</p>
+				<div id="translated-text"></div>
+			</div>
+		</div>
+	</body>
 </html>

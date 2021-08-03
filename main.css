@@ -1,7 +1,14 @@
+:root {
+	--primary-color: #486433;
+	--accent-color: #252525;
+	--light-color: #efe7ce;
+}
+
 * {
 	margin: 0;
 	padding: 0;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Zen Dots", cursive;
+	color: var(--accent-color);
 }
 
 body {
@@ -9,4 +16,130 @@ body {
 	overflow: auto;
 	display: grid;
 	place-items: center;
+	background-size: cover;
+	background-image: url(./assets/wave-haikei.svg);
+	background-color: var(--light-color);
+}
+
+.content {
+	width: 85vw;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.intro,
+.translate {
+	margin: 1rem;
+	width: 35vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+/* Intro */
+
+.heading {
+	font-size: 4rem;
+	margin: 0.5em 0;
+	font-style: italic;
+	color: var(--light-color);
+}
+
+.sub-heading {
+	font-size: 1.5em;
+	margin: 0.5em 0;
+	color: var(--light-color);
+}
+
+.about {
+	font-size: 1.3em;
+	width: 85%;
+	line-height: 1.5em;
+	color: var(--light-color);
+}
+
+/* Translation */
+
+.translate {
+	justify-content: center;
+}
+
+textarea {
+	margin: 1em;
+	padding: 1em;
+	border: 1px solid var(--accent-color);
+	border-radius: 5px;
+	background-color: var(--light-color);
+	font-size: medium;
+	resize: vertical;
+}
+
+textarea:focus {
+	outline: none;
+}
+
+.translated-heading {
+	place-self: start;
+	padding: 1em;
+	font-size: 1.1rem;
+}
+
+button {
+	margin: 1em;
+	padding: 1em;
+
+	border: 1px solid var(--accent-color);
+	border-radius: 5px;
+
+	background-color: transparent;
+	color: var(--accent-color);
+
+	font-size: 1rem;
+	font-weight: bold;
+
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: var(--accent-color);
+	color: var(--light-color);
+}
+
+#translate-button {
+	width: 200px;
+}
+
+#translated-text {
+	margin: 1em;
+	padding: 1em;
+
+	border: 1px dashed var(--accent-color);
+	border-radius: 5px;
+	background-color: var(--light-color);
+
+	font-size: medium;
+}
+
+@media screen and (max-width: 767px) {
+	.intro,
+	.translate {
+		width: 85vw;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.heading {
+		font-size: 3rem;
+	}
+
+	.sub-heading {
+		font-size: 1.2em;
+		margin: 0.5em 0;
+	}
+
+	.about {
+		font-size: 1.1em;
+		width: 85%;
+	}
 }
